@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Task project</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+</head>
+<style>
+    .h4 {
+        color: white;
+        margin-left: 50px;
+        word-spacing: 5px;
+        margin-top: 20px;
+
+    }
+
+    .h1 {
+        color: white;
+        font-size: 20px;
+        font-weight: bolder;
+        font-family: Verdana;
+        margin-left: 100px;
+        margin-top: 50px;
+    }
+</style>
+
+<body>
+
+
+
+    <h4 class="h4"><a href="{%url 'taskapp:load_files' %}">DATA MAPPING TOOL</ha></a>
+        <hr size="2" color="white" width="100%">
+        <h1 class="h1">Welcome to Basal Analytics</h1>
+        <form method="post">
+            {%csrf_token%}
+            <table border="1px">
+                {{form.as_table}}
+                <tr>
+                    <td><input type="submit"></td>
+                    <td><input type="reset"></td>
+                </tr>
+            </table>
+        </form>
+</body>
